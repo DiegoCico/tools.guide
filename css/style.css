@@ -9,56 +9,83 @@ body {
 
 header {
   display: flex;
+  align-items: center; /* Center items vertically */
   justify-content: space-between;
-  padding: 10px;
-  background: linear-gradient(145deg, #1c1c1c, #0a0a0a); /* Modern gradient */
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 0 20px; /* Adjust padding for better spacing */
+  background: linear-gradient(145deg, #2a2a2a, #1a1a1a); /* Updated gradient for depth */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4); /* Stronger shadow for prominence */
   z-index: 1010;
   position: fixed;
   width: 100%;
-  height: 50px;
+  height: 60px; /* Increased height for better visual balance */
   top: 0;
   left: 0;
   transition: all 0.3s;
 }
 
 header:hover {
-  background: linear-gradient(145deg, #242424, #111111); /* Slightly lighter gradient on hover */
+  background: linear-gradient(145deg, #333333, #222222); /* Slightly lighter gradient on hover */
 }
 
 .title {
   font-weight: bold;
-  font-size: 24px;
-  margin-left: 2%;
-  color: #e0e0e0; /* Slightly off-white color for a softer look */
-  text-shadow: 1px 1px 2px black; /* Subtle text shadow for depth */
+  font-size: 26px; /* Slightly larger font size for better visibility */
+  color: #f0f0f0; /* Brighter color for better readability */
+  text-shadow: 1px 1px 3px black; /* Enhanced text shadow for depth */
+  transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.title:hover {
+  color: #ffffff; /* Slightly brighter color on hover */
 }
 
 .sidebar {
-  height: calc(100vh - 50px);
-  width: 200px;
+  height: calc(100vh - 50px); /* Full height minus header */
+  width: 200px; /* Sidebar width */
   position: fixed;
-  z-index: 1000;
-  top: 45px;
+  top: 50px; /* Below the header */
   left: 0;
-  background-color: #111;
-  color: #ccc;
+  background-color: #1c1c1c; /* Darker shade for depth */
+  color: #ccc; /* Light gray text for contrast */
   overflow-x: hidden;
   padding-top: 20px;
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+  transition: all 0.3s; /* Smooth transition for hover effects */
 }
 
 .sidebar a {
-  padding: 10px 15px;
+  padding: 12px 20px; /* Increase padding for better spacing */
   text-decoration: none;
   font-size: 18px;
-  color: #ccc;
-  transition: color 0.3s;
+  font-weight: 500; /* Slightly bolder font */
+  color: #d0d0d0; /* Soft white color for links */
   display: block;
+  transition: background-color 0.3s, color 0.3s;
+  border-left: 3px solid transparent; /* Add a border for a modern look */
 }
 
 .sidebar a:hover {
-  color: #fff;
+  color: #fff; /* Brighter color on hover */
+  background-color: #252525; /* Dark background on hover */
+  border-left: 3px solid ghostwhite; /* Highlight color for active link */
 }
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul a {
+  color: #b8b8b8; /* Lighter color for non-hover state */
+}
+
+.sidebar ul a img {
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+
 
 @media screen and (max-height: 450px) {
   .sidebar {padding-top: 15px;}
@@ -69,25 +96,6 @@ header:hover {
 
 
 
-
-
-
-
-
-nav ul {
-  list-style: none;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline;
-  margin-left: 20px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-}
 
 footer {
   text-align: center;
