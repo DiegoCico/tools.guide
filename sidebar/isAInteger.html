@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>tools.guide</title>
   <link rel="stylesheet" href="../css/style.css">
-  <meta name="diego.tools documentations" content="">
+  <meta name="diego.tools documentations" content="isAInteger">
 
 
 </head>
@@ -19,7 +19,7 @@
 
 <div class="sidebar">
   <ul>
-    <a href="sidebar/input.html"><img src="../img/classImg.png" width="20%" height="20%"/>input</a>
+    <a href="input.html"><img src="../img/classImg.png" width="20%" height="20%"/>input</a>
     <a href="#services"> <img src="../img/classImg.png" width="20%" height="20%"/> isAInteger</a>
     <a href="#about"> <img src="../img/classImg.png" width="20%" height="20%"/> linesToString</a>
     <a href="#contact"> <img src="../img/classImg.png" width="20%" height="20%"/> print</a>
@@ -32,6 +32,34 @@
     <a href="#services"> <img src="../img/classImg.png" width="20%" height="20%"/> toInt </a>
   </ul>
 </div>
+
+<div class="info">
+  <h1>isAInteger Function</h1>
+  <p>The <code>isAInteger()</code> function is a specialized tool designed to ascertain if a given string can be interpreted as an integer. Its primary application is in validating and parsing input data, ensuring numerical integrity.</p>
+
+  <h2>Usage Examples</h2>
+  <p>This function returns a Boolean value: <code>true</code> if the string represents an integer, and <code>false</code> otherwise. Below are some practical examples demonstrating its utility:</p>
+
+  <div class="rowBox">
+    <div class="box codeSnippet">
+      <p>&gt;&gt;&gt; <span class="colorYellow">isAInteger(</span><span class="colorGreen">"How Are You"</span><span class="colorYellow">);</span></p>
+      <p class="output">Java.Boolean = false</p>
+      <p>&gt;&gt;&gt; <span class="colorYellow">isAInteger(</span><span class="colorGreen">"77"</span><span class="colorYellow">);</span></p>
+      <p class="output">Java.Boolean = true</p>
+    </div>
+  </div>
+
+  <h2>Additional Functionality</h2>
+  <p>When combined with other functions like <code>toInt()</code>, it becomes a powerful tool for data type conversion:</p>
+
+  <div class="rowBox">
+    <div class="box codeSnippet">
+      <p>&gt;&gt;&gt; <span class="colorYellow">toInt(</span><span class="colorGreen">"77"</span><span class="colorYellow">);</span></p>
+      <p class="output">Java.int = 77</p>
+    </div>
+  </div>
+</div>
+
 
 
 
