@@ -20,7 +20,7 @@
 <div class="sidebar">
   <ul>
     <a href="#ignored"><img src="../img/classImg.png" width="20%" height="20%"/>input</a>
-    <a href="#services"> <img src="../img/classImg.png" width="20%" height="20%"/> isAInteger</a>
+    <a href="isAInteger.html"> <img src="../img/classImg.png" width="20%" height="20%"/> isAInteger</a>
     <a href="#about"> <img src="../img/classImg.png" width="20%" height="20%"/> linesToString</a>
     <a href="#contact"> <img src="../img/classImg.png" width="20%" height="20%"/> print</a>
     <a href="#home"><img src="../img/classImg.png" width="20%" height="20%"/>printArray</a>
@@ -34,16 +34,42 @@
 </div>
 
 <div class="info">
-  <h1> Input </h1>
-  <p> Used to gain the input the user gives, it auto sets it to String, Float, Int</p>
+  <h1> Input Function </h1>
+  <p>The <code>input()</code> function is a versatile tool used in diego.tools to capture user input. It automatically detects and converts the input to the appropriate data type such as String, Float, or Int.</p>
+
+  <h2>Usage Examples</h2>
 
   <div class="rowBox">
-    <div class="box">
+    <div class="box codeSnippet">
+      <p>&gt;&gt;&gt; <span class="colorGreen">String</span> name = <span class="colorYellow">input();</span></p>
+      <p class="output">Sofia</p>
+      <p>&gt;&gt;&gt; System.out.println(<span class="colorBlue">name</span>);</p>
+      <p class="output">Java.String = Sofia</p>
+    </div>
+  </div>
 
+  <p>The function reads a line of text entered by the user, pausing program execution until input is provided. It intelligently assigns the input to a variable, ensuring type correctness.</p>
+
+  <div class="rowBox">
+    <div class="box codeSnippet">
+      <p>&gt;&gt;&gt; <span class="colorGreen">Int</span> age = <span class="colorYellow">input();</span></p>
+      <p class="output">19</p>
+      <p>&gt;&gt;&gt; System.out.println(<span class="colorBlue">age</span>);</p>
+      <p class="output">Java.int = 19</p>
+    </div>
+  </div>
+
+  <div class="rowBox">
+    <div class="box codeSnippet">
+      <p>&gt;&gt;&gt; <span class="colorGreen">Float</span> GPA = <span class="colorYellow">input();</span></p>
+      <p class="output">3.9</p>
+      <p>&gt;&gt;&gt; System.out.println(<span class="colorBlue">GPA</span>);</p>
+      <p class="output">Java.Float = 3.9</p>
     </div>
   </div>
 
 </div>
+
 
 
 

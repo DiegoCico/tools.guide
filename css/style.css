@@ -1,3 +1,4 @@
+/* Global Styles */
 body {
   font-family: 'Arial', sans-serif;
   background-color: #121212;
@@ -5,6 +6,12 @@ body {
   margin: 0;
   padding-left: 200px;
   padding-top: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding-left: 50px; /* Adjust for smaller screens */
+  }
 }
 
 header {
@@ -85,18 +92,17 @@ header:hover {
   margin-right: 8px;
 }
 
-
-
 @media screen and (max-height: 450px) {
   .sidebar {padding-top: 15px;}
   .sidebar a {font-size: 18px;}
 }
 
-.info{
+.info {
   top: 50px;
   left: 220px;
   margin-left: 2%;
   margin-top: 2%;
+  margin-right: 2%;
 }
 
 /* Flex container for rows */
@@ -108,27 +114,29 @@ header:hover {
 
 /* Styles for individual boxes */
 .box {
-  flex: 0 1 90%;
   border: 1px solid dimgrey;
   padding: 20px;
-  height: 350px;
+  width: 100%;
   margin: 3vw;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  background-color: grey;
+  background-color: #2b2b2b;
+  color: #f0f0f0;
 }
 
 /* Box styles for medium screens */
 @media (min-width: 600px) {
   .box {
-    flex: 0 1 50%;
+    width: 90%;
   }
 }
 
 /* Box styles for large screens */
 @media (min-width: 1024px) {
   .box {
-    flex: 0 1 30%;
+    width: 80%;
+    max-width: 1200px;
+    margin: 20px auto;
   }
 }
 
@@ -148,26 +156,46 @@ header:hover {
   font-family: Arial, sans-serif;
 }
 
-.colorRed{
+/* Color Classes */
+.colorRed {
   color: red;
 }
 
-.colorBlue{
-  color: lightskyblue;
+.codeSnippet {
+  background-color: #1e1e1e; /* Dark background for code snippet */
+  color: #dcdcdc; /* Lighter text color for better contrast */
+  font-family: 'Courier New', Courier, monospace; /* Monospace font for code */
+  padding: 15px;
+  border-radius: 8px;
 }
 
-.colorGreen{
-  color: lawngreen;
+.codeSnippet p {
+  margin: 5px 0; /* Spacing between lines */
+}
+
+/* Styling for the output text */
+.output {
+  color: #9cdcfe; /* Light blue for output text */
+}
+
+/* Enhanced color styles */
+.colorGreen {
+  color: #4ec9b0; /* Softer green */
+}
+
+.colorYellow {
+  color: #dcdcaa; /* Softer yellow */
+}
+
+.colorBlue {
+  color: #569cd6; /* Softer blue */
 }
 
 
-
-
-
+/* Footer Styling */
 footer {
   text-align: center;
   padding: 1em;
   background-color: #1a1a1a;
+  color: #f0f0f0;
 }
-
-
