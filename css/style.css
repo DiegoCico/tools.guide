@@ -1,8 +1,8 @@
 /* Global Styles */
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #121212;
-  color: white;
+  background-color: #1a1a1a; /* Lightened background color */
+  color: #e0e0e0; /* Slightly lighter text color for better readability */
   margin: 0;
   padding-left: 200px;
   padding-top: 50px;
@@ -10,54 +10,54 @@ body {
 
 @media screen and (max-width: 768px) {
   body {
-    padding-left: 50px; /* Adjust for smaller screens */
+    padding-left: 50px;
   }
 }
 
+/* Header styling */
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
-  background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+  background: linear-gradient(145deg, #303030, #202020); /* Lighter gradient */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
-  z-index: 1010;
   position: fixed;
   width: 100%;
   height: 60px;
   top: 0;
   left: 0;
+  z-index: 1010;
   transition: all 0.3s;
 }
 
 header:hover {
-  background: linear-gradient(145deg, #333333, #222222);
+  background: linear-gradient(145deg, #383838, #282828);
 }
 
 .title {
   font-weight: bold;
   font-size: 26px;
-  color: #f0f0f0;
+  color: #f8f8f8; /* Slightly brighter text color */
   text-shadow: 1px 1px 3px black;
-  transition: color 0.3s;
 }
 
 .title:hover {
   color: #ffffff;
 }
 
+/* Sidebar styling */
 .sidebar {
   height: calc(100vh - 50px);
   width: 200px;
   position: fixed;
   top: 50px;
   left: 0;
-  background-color: #1c1c1c;
-  color: #ccc;
+  background-color: #242424; /* Lightened sidebar background */
+  color: #d4d4d4; /* Lightened text color */
   overflow-x: hidden;
   padding-top: 20px;
   box-shadow: 5px 0 15px rgba(0, 0, 0, 0.5);
-  transition: all 0.3s;
 }
 
 .sidebar a {
@@ -65,7 +65,7 @@ header:hover {
   text-decoration: none;
   font-size: 18px;
   font-weight: 500;
-  color: #d0d0d0;
+  color: #e0e0e0; /* Slightly brighter link color */
   display: block;
   transition: background-color 0.3s, color 0.3s;
   border-left: 3px solid transparent;
@@ -73,7 +73,7 @@ header:hover {
 
 .sidebar a:hover {
   color: #fff;
-  background-color: #252525;
+  background-color: #2e2e2e; /* Lighter hover background */
   border-left: 3px solid ghostwhite;
 }
 
@@ -93,109 +93,85 @@ header:hover {
 }
 
 @media screen and (max-height: 450px) {
-  .sidebar {padding-top: 15px;}
-  .sidebar a {font-size: 18px;}
+  .sidebar { padding-top: 15px; }
+  .sidebar a { font-size: 18px; }
 }
 
+/* Content area styling */
 .info {
   top: 50px;
-  left: 220px;
+  left: 220px; /* Offset to accommodate sidebar */
   margin-left: 2%;
   margin-top: 2%;
   margin-right: 2%;
 }
 
-/* Flex container for rows */
+/* Flex container for content boxes */
 .rowBox {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-/* Styles for individual boxes */
+/* Individual box styling */
 .box {
-  border: 1px solid dimgrey;
+  border: 1px solid grey; /* Lighter border color */
   padding: 20px;
   width: 100%;
   margin: 3vw;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  background-color: #2b2b2b;
-  color: #f0f0f0;
+  background-color: #333333; /* Lightened box background */
+  color: #f0f0f0; /* High contrast text color */
 }
 
-/* Box styles for medium screens */
-@media (min-width: 600px) {
-  .box {
-    width: 90%;
-  }
-}
-
-/* Box styles for large screens */
+/* Responsive box styles for medium and large screens */
+@media (min-width: 600px) { .box { width: 90%; } }
 @media (min-width: 1024px) {
   .box {
     width: 80%;
     max-width: 1200px;
-    margin: 20px auto;
+    margin: 20px auto; /* Center boxes on larger screens */
   }
 }
 
-/* Title styles within boxes */
-.boxTitle {
-  font-size: 30px;
+/* Box title and subtitle styling */
+.boxTitle, .boxSubTitle {
   text-align: center;
   font-family: Arial, sans-serif;
+}
+.boxTitle {
+  font-size: 30px;
   font-weight: bold;
 }
-
-/* Subtitle styles within boxes */
 .boxSubTitle {
   margin: 5px;
   color: #666;
-  text-align: center;
-  font-family: Arial, sans-serif;
 }
 
-/* Color Classes */
-.colorRed {
-  color: red;
-}
-
+/* Code snippet styling */
 .codeSnippet {
-  background-color: #1e1e1e; /* Dark background for code snippet */
-  color: #dcdcdc; /* Lighter text color for better contrast */
-  font-family: 'Courier New', Courier, monospace; /* Monospace font for code */
+  background-color: #262626; /* Lightened background for code blocks */
+  color: #dcdcdc; /* Lighter text color for contrast */
+  font-family: 'Courier New', Courier, monospace; /* Monospace font */
   padding: 15px;
   border-radius: 8px;
 }
 
-.codeSnippet p {
-  margin: 5px 0; /* Spacing between lines */
-}
+.codeSnippet p { margin: 5px 0; /* Spacing between lines in code blocks */ }
 
-/* Styling for the output text */
-.output {
-  color: #9cdcfe; /* Light blue for output text */
-}
+/* Output text styling */
+.output { color: #9cdcfe; /* Light blue for output text */ }
 
-/* Enhanced color styles */
-.colorGreen {
-  color: #4ec9b0; /* Softer green */
-}
+/* Enhanced color styles for code elements */
+.colorGreen { color: #4ec9b0; }
+.colorYellow { color: #dcdcaa; }
+.colorBlue { color: #569cd6; }
 
-.colorYellow {
-  color: #dcdcaa; /* Softer yellow */
-}
-
-.colorBlue {
-  color: #569cd6; /* Softer blue */
-}
-
-
-/* Footer Styling */
+/* Footer styling */
 footer {
   text-align: center;
   padding: 1em;
-  background-color: #1a1a1a;
-  color: #f0f0f0;
+  background-color: #202020; /* Lightened footer background */
+  color: #f0f0f0; /* High contrast text color */
 }
