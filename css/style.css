@@ -46,6 +46,10 @@ header:hover {
   color: #ffffff;
 }
 
+.hiddenSidebar {
+  display: none;
+}
+
 /* Sidebar styling */
 .sidebar {
   height: calc(100vh - 50px);

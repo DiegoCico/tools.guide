@@ -35,6 +35,21 @@
 
 
 
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var header = document.querySelector('header');
+    var sidebar = document.querySelector('.sidebar');
+
+    header.addEventListener('click', function() {
+      if (window.innerWidth <= 768) { // Check if the screen width is 768px or less
+        sidebar.classList.toggle('hiddenSidebar');
+      }
+    });
+  });
+</script>
+</body>
+</html>
+
 </body>
 
 </html>
