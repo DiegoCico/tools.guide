@@ -50,6 +50,55 @@ header:hover {
   display: none;
 }
 
+/* Welcome Section Styles */
+.welcome-section {
+  margin: 2% auto;
+  max-width: 800px;
+  padding: 20px;
+  background-color: #3d3d3d; /* Consistent with box background */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #f0f0f0; /* Using global text color */
+}
+
+.welcome-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #fcfcfc; /* Consistent with header title */
+  text-shadow: 1px 1px 3px black;
+}
+
+.welcome-section h2 {
+  color: #c8c8c8; /* Lighter color for subtitles */
+  font-size: 22px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.welcome-section p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Responsive Design for Welcome Section */
+@media (max-width: 600px) {
+  .welcome-section {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .welcome-title {
+    font-size: 24px;
+  }
+
+  .welcome-section h2 {
+    font-size: 20px;
+  }
+}
+
+
 /* Sidebar styling */
 .sidebar {
   height: calc(100vh - 50px);
