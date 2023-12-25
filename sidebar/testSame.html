@@ -1,0 +1,110 @@
+<!doctype html>
+<html class="no-js" lang="ENG">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>tools.guide</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <meta name="diego.tools documentations" content="">
+  <link rel="icon" type="image/png" href="../img/logo.png">
+
+
+</head>
+
+<body>
+
+<header class="logo">
+  <h1 class = "title">diego.tools</h1>
+</header>
+
+<div class="sidebar">
+  <ul>
+    <a href="input.html"><img src="../img/classImg.png" width="20%" height="20%"/>input</a>
+    <a href="isAInteger.html"> <img src="../img/classImg.png" width="20%" height="20%"/> isAInteger</a>
+    <a href="linesToString.html"> <img src="../img/classImg.png" width="20%" height="20%"/> linesToString</a>
+    <a href="print.html"> <img src="../img/classImg.png" width="20%" height="20%"/> print</a>
+    <a href="printArray.html"><img src="../img/classImg.png" width="20%" height="20%"/>printArray</a>
+    <a href="println.html"> <img src="../img/classImg.png" width="20%" height="20%"/> println</a>
+    <a href="round.html"> <img src="../img/classImg.png" width="20%" height="20%"/> round</a>
+    <a href="runTest.html"> <img src="../img/classImg.png" width="20%" height="20%"/> runTest</a>
+    <a href="test.html"><img src="../img/interfaceImg.png" width="20%" height="20%"/>Test</a>
+    <a href="#services"> <img src="../img/classImg.png" width="20%" height="20%"/> testSame</a>
+    <a href="toInt.html"> <img src="../img/classImg.png" width="20%" height="20%"/> toInt </a>
+  </ul>
+</div>
+
+<div class="info">
+  <h1>testSame Function</h1>
+  <p>The <code>testSame()</code> function is designed to compare the output of a given script with an expected value and report the result. It is useful for writing unit tests where you need to assert the output of certain operations.</p>
+
+  <h2>Usage Example</h2>
+
+  <div class="box codeSnippet">
+  <pre><code><span class="comment">// Sample methods to be tested</span>
+<span class="keyword">public static int</span> addNumbers(<span class="keyword">int</span> a, <span class="keyword">int</span> b) {
+  <span class="keyword">return</span> a + b;
+}
+
+<span class="keyword">public static int</span> multiplyNumbers(<span class="keyword">int</span> a, <span class="keyword">int</span> b) {
+  <span class="keyword">return</span> a * b;
+}
+
+<span class="keyword">public static String</span> concatenateStrings(String a, String b) {
+  <span class="keyword">return</span> a + b;
+}</code></pre>
+  </div>
+
+  <div class="box outputSnippet">
+    <h3>Expected Output</h3>
+    <pre><span class="output">Test (AdditionTest): Passed
+Test (MultiplicationTest): Passed
+Test (ConcatenationTest): Passed</span></pre>
+  </div>
+
+  <h2>Function Definition</h2>
+  <pre class="syntax"><code>public static &lt;T&gt; void testSame(Supplier&lt;T&gt; script, T expectedOutput, String name) {
+    T actualOutput = script.get();
+    if (actualOutput == null ? expectedOutput == null : actualOutput.equals(expectedOutput))
+        System.out.println("Test (" + name + "): Passed");
+    else
+        System.out.println(String.format("Test (%s): Got = %s, Expected = %s", name, actualOutput, expectedOutput));
+}</code></pre>
+
+  <h2>Parameters</h2>
+  <ul>
+    <li><code>script</code>: A <code>Supplier&lt;T&gt;</code> that returns the output to be tested.</li>
+    <li><code>expectedOutput</code>: The expected output value to compare against.</li>
+    <li><code>name</code>: A descriptive name for the test case.</li>
+  </ul>
+
+  <h2>Expected Output</h2>
+  <p>The function will print "Test (name): Passed" if the actual output matches the expected output, otherwise it will print what was received versus what was expected.</p>
+
+  <h2>Implementation Notes</h2>
+  <ul>
+    <li>This function uses Java generics and is suitable for any type of data.</li>
+    <li>It's especially useful in scenarios where testing the outcome of functional interfaces or lambdas.</li>
+  </ul>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var header = document.querySelector('header');
+    var sidebar = document.querySelector('.sidebar');
+
+    header.addEventListener('click', function() {
+      if (window.innerWidth <= 768) { // Check if the screen width is 768px or less
+        sidebar.classList.toggle('hiddenSidebar');
+      } else {
+        window.location.href = '../index.html';
+      }
+    });
+  });
+</script>
+</body>
+</html>
+
+</body>
+
+</html>

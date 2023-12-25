@@ -6,8 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>tools.guide</title>
   <link rel="stylesheet" href="../css/style.css">
-  <meta name="diego.tools documentations" content="printArray">
+  <meta name="diego.tools documentations" content="">
   <link rel="icon" type="image/png" href="../img/logo.png">
+
+
 </head>
 
 <body>
@@ -22,7 +24,7 @@
     <a href="isAInteger.html"> <img src="../img/classImg.png" width="20%" height="20%"/> isAInteger</a>
     <a href="linesToString.html"> <img src="../img/classImg.png" width="20%" height="20%"/> linesToString</a>
     <a href="print.html"> <img src="../img/classImg.png" width="20%" height="20%"/> print</a>
-    <a href="#home"><img src="../img/classImg.png" width="20%" height="20%"/>printArray</a>
+    <a href="printArray.html"><img src="../img/classImg.png" width="20%" height="20%"/>printArray</a>
     <a href="println.html"> <img src="../img/classImg.png" width="20%" height="20%"/> println</a>
     <a href="round.html"> <img src="../img/classImg.png" width="20%" height="20%"/> round</a>
     <a href="runTest.html"> <img src="../img/classImg.png" width="20%" height="20%"/> runTest</a>
@@ -33,45 +35,40 @@
 </div>
 
 <div class="info">
-  <h1>printArray Function</h1>
-  <p>The <code>printArray()</code> function is designed to print the elements of an array in a readable format. It iterates over the array and prints each element.</p>
+  <h1>toInt Function</h1>
+  <p>The <code>toInt()</code> function converts a string representation of a number into an integer value.</p>
 
-  <h2>Usage Examples</h2>
-
-  <div class="rowBox">
-    <div class="box codeSnippet">
-      <p>&gt;&gt;&gt; <span class="colorGreen">int[]</span> numbers = {1, 2, 3, 4, 5};</p>
-      <p>&gt;&gt;&gt; <span class="colorYellow">printArray(numbers);</span></p>
-      <p class="output">1, 2, 3, 4, 5</p>
-    </div>
-  </div>
-
-  <p>The function simplifies the process of printing array elements, without needing to write a loop each time.</p>
-
-  <div class="rowBox">
-    <div class="box codeSnippet">
-      <p>&gt;&gt;&gt; <span class="colorGreen">String[]</span> names = {"Alice", "Bob", "Charlie"};</p>
-      <p>&gt;&gt;&gt; <span class="colorYellow">printArray(names);</span></p>
-      <p class="output">Alice, Bob, Charlie</p>
-    </div>
-  </div>
-
-  <h2>Function Definition</h2>
-  <pre class="syntax"><code>public static &lt;T&gt; void printArray(T[] array) {
-    for (T element : array) {
-        System.out.print(element + ", ");
+  <h2>Usage Example</h2>
+  <div class="box codeSnippet">
+    <pre><code><span class="keyword">public static int</span> toInt(String number) {
+    <span class="keyword">try</span> {
+        <span class="keyword">return</span> Integer.parseInt(number);
+    } <span class="keyword">catch</span> (NumberFormatException e) {
+        e.printStackTrace();
+        <span class="keyword">return</span> 0; <span class="comment">// or handle error differently</span>
     }
-    System.out.println();
-}</code></pre>
+}
 
-  <h2>Notes</h2>
+<span class="keyword">public static void</span> main(String[] args) {
+    <span class="keyword">int</span> result = toInt("123");
+    System.out.println(result);
+}</code></pre>
+  </div>
+
+  <h2>Expected Output</h2>
+  <div class="box outputSnippet">
+    <pre><span class="output">123</span></pre>
+  </div>
+
+  <h2>Function Behavior</h2>
+  <p>The function attempts to parse a string as an integer using <code>Integer.parseInt</code>. If the string is not a valid integer, it catches the <code>NumberFormatException</code> and can return a default value or handle the error as needed.</p>
+
+  <h2>Implementation Notes</h2>
   <ul>
-    <li>This method can handle arrays of any type, including primitives and objects.</li>
-    <li>It uses a generic type <code>T</code>, making it versatile for various array types.</li>
+    <li>This method is useful when dealing with user input or parsing strings that represent numerical values.</li>
+    <li>Error handling is important to prevent the application from crashing due to invalid input.</li>
   </ul>
 </div>
-
-
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {

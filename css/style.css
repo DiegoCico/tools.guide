@@ -219,6 +219,13 @@ header:hover {
 .colorGreen { color: #4ec9b0; }
 .colorYellow { color: #dcdcaa; }
 .colorBlue { color: #569cd6; }
+.keyword { color: #0072BD; } /* Blue for keywords */
+.literal { color: #569cd6; } /* Light blue for literals/numbers */
+.method { color: #DCDCAA; } /* Yellow for method names */
+.string { color: #CE9178; } /* Orange for strings */
+.comment { color: #6A9955; } /* Green for comments */
+.output { color: #9CDCFE; } /* Lighter blue for output */
+.error { color: #D16969; }
 
 /* Footer styling */
 footer {
