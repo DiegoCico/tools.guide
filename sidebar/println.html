@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>tools.guide</title>
   <link rel="stylesheet" href="../css/style.css">
-  <meta name="diego.tools documentations" content="isAInteger">
+  <meta name="diego.tools documentations" content="">
 
 
 </head>
@@ -20,11 +20,11 @@
 <div class="sidebar">
   <ul>
     <a href="input.html"><img src="../img/classImg.png" width="20%" height="20%"/>input</a>
-    <a href=""> <img src="../img/classImg.png" width="20%" height="20%"/> isAInteger</a>
+    <a href="isAInteger.html"> <img src="../img/classImg.png" width="20%" height="20%"/> isAInteger</a>
     <a href="linesToString.html"> <img src="../img/classImg.png" width="20%" height="20%"/> linesToString</a>
     <a href="print.html"> <img src="../img/classImg.png" width="20%" height="20%"/> print</a>
     <a href="printArray.html"><img src="../img/classImg.png" width="20%" height="20%"/>printArray</a>
-    <a href="println.html"> <img src="../img/classImg.png" width="20%" height="20%"/> println</a>
+    <a href="#services"> <img src="../img/classImg.png" width="20%" height="20%"/> println</a>
     <a href="round.html"> <img src="../img/classImg.png" width="20%" height="20%"/> round</a>
     <a href="#contact"> <img src="../img/classImg.png" width="20%" height="20%"/> runTest</a>
     <a href="#home"><img src="../img/interfaceImg.png" width="20%" height="20%"/>Test</a>
@@ -34,46 +34,45 @@
 </div>
 
 <div class="info">
-  <h1>isAInteger Function</h1>
-  <p>The <code>isAInteger()</code> function checks if a given string can be successfully converted to an integer without causing an exception.</p>
+  <h1>println Function</h1>
+  <p>The <code>println()</code> function in Java is used to display text or variables in the terminal and appends a newline at the end of the output.</p>
 
-  <h2>Usage Examples</h2>
-
-  <div class="rowBox">
-    <div class="box codeSnippet">
-      <p>&gt;&gt;&gt; <span class="colorGreen">String</span> validNumber = "12345";</p>
-      <p>&gt;&gt;&gt; <span class="colorGreen">String</span> invalidNumber = "123.45";</p>
-      <p>&gt;&gt;&gt; <span class="colorBlue">System.out.println(isAInteger(validNumber));</span></p>
-      <p class="output">true</p>
-      <p>&gt;&gt;&gt; <span class="colorBlue">System.out.println(isAInteger(invalidNumber));</span></p>
-      <p class="output">false</p>
-    </div>
-  </div>
-
-  <h2>Function Definition</h2>
-  <pre class="syntax"><code>public static boolean isAInteger(String str) {
-    try {
-        Integer.parseInt(str);
-        return true;
-    } catch (NumberFormatException e) {
-        return false;
-    }
-}</code></pre>
+  <h2>Syntax</h2>
+  <pre class="syntax"><code>System.out.println(Object obj);</code></pre>
 
   <h2>Parameters</h2>
   <ul>
-    <li><code>str</code>: The string to be checked.</li>
+    <li><code>obj</code>: The object to be printed. It can be a string, number, or any other data type, followed by a newline.</li>
   </ul>
 
   <h2>Return Type</h2>
-  <p>Returns <code>true</code> if the string can be converted to an integer, and <code>false</code> otherwise.</p>
+  <p>This method does not return any value.</p>
+
+  <h2>Usage Example</h2>
+  <div class="rowBox">
+    <div class="box codeSnippet">
+      <p>&gt;&gt;&gt; <span class="colorYellow">System.out.println(</span><span class="colorGreen">"Hello World!"</span><span class="colorYellow">);</span></p>
+      <p class="output">Hello World!</p>
+    </div>
+  </div>
+
+  <div class="rowBox">
+    <div class="box codeSnippet">
+      <p>&gt;&gt;&gt; <span class="colorGreen">String</span> name = "Gaby";</p>
+      <p>&gt;&gt;&gt; <span class="colorGreen">int</span> age = 19;</p>
+      <p>&gt;&gt;&gt; <span class="colorYellow">System.out.println(</span><span class="colorGreen">name + " is " + age + " years old"</span><span class="colorYellow">);</span></p>
+      <p class="output">Gaby is 19 years old</p>
+    </div>
+  </div>
 
   <h2>Notes</h2>
   <ul>
-    <li>This method is useful for validating user input or parsing data where integer values are expected.</li>
-    <li>It utilizes a try-catch block to handle potential <code>NumberFormatException</code>.</li>
+    <li>Use <code>println()</code> for outputs that require each item on a new line.</li>
+    <li>This method also can be overloaded with different types of parameters.</li>
+    <li>It's commonly used for debugging to quickly print variable values with line separation.</li>
   </ul>
 </div>
+
 
 
 <script>

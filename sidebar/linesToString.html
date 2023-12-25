@@ -23,9 +23,9 @@
     <a href="isAInteger.html"> <img src="../img/classImg.png" width="20%" height="20%"/> isAInteger</a>
     <a href="#about"> <img src="../img/classImg.png" width="20%" height="20%"/> linesToString</a>
     <a href="print.html"> <img src="../img/classImg.png" width="20%" height="20%"/> print</a>
-    <a href="#home"><img src="../img/classImg.png" width="20%" height="20%"/>printArray</a>
-    <a href="#services"> <img src="../img/classImg.png" width="20%" height="20%"/> println</a>
-    <a href="#about"> <img src="../img/classImg.png" width="20%" height="20%"/> round</a>
+    <a href="printArray.html"><img src="../img/classImg.png" width="20%" height="20%"/>printArray</a>
+    <a href="println.html"> <img src="../img/classImg.png" width="20%" height="20%"/> println</a>
+    <a href="round.html"> <img src="../img/classImg.png" width="20%" height="20%"/> round</a>
     <a href="#contact"> <img src="../img/classImg.png" width="20%" height="20%"/> runTest</a>
     <a href="#home"><img src="../img/interfaceImg.png" width="20%" height="20%"/>Test</a>
     <a href="#services"> <img src="../img/classImg.png" width="20%" height="20%"/> testSame</a>
@@ -35,21 +35,60 @@
 
 <div class="info">
   <h1>linesToString Function</h1>
-  <p>The <code>linesToString()</code> function is designed to process an array of strings. It effectively concatenates each element into a single string, separating them line by line for improved readability and presentation.</p>
+  <p>The <code>linesToString()</code> function takes an array of strings and concatenates them, placing each element on a new line.</p>
 
-  <h2>Functionality Overview</h2>
-  <p>This function transforms an array of strings into a well-structured text block, where each array element is placed on a new line. This is particularly useful in scenarios requiring formatted output from an array. Below is a practical example:</p>
+  <h2>Usage Examples</h2>
 
   <div class="rowBox">
     <div class="box codeSnippet">
-      <p>&gt;&gt;&gt; <span class="colorYellow">linesToString(</span><span class="colorGreen">["Hello", "Goodbye", "Adios!"]</span><span class="colorYellow">);</span></p>
-      <p class="output">Hello</p>
-      <p class="output">Goodbye</p>
-      <p class="output">Adios!</p>
+      <p>&gt;&gt;&gt; <span class="colorGreen">String[]</span> lines = {"Line 1", "Line 2", "Line 3"};</p>
+      <p>&gt;&gt;&gt; <span class="colorBlue">System.out.println(linesToString(lines));</span></p>
+      <p class="output">Line 1<br>Line 2<br>Line 3</p>
     </div>
   </div>
-</div>
 
+  <p>This function is particularly useful for formatting multi-line text from an array of strings.</p>
+
+  <h2>Function Definition</h2>
+  <pre class="syntax"><code>public static void linesToString(String[] list) {
+        for (String str : list) {
+            System.out.println(str);
+        }
+    }
+  </code></pre>
+
+  <h2>Parameters</h2>
+  <ul>
+    <li><code>lines</code>: An array of strings to be concatenated.</li>
+  </ul>
+
+  <h2>Return Type</h2>
+  <p>Returns a single string with each array element on a new line.</p>
+
+  <h2>Integration Example</h2>
+  <p>Combining with File Writing:</p>
+  <div class="box">
+    <h3>Integration Example with File Writing</h3>
+    <div class="codeSnippet">
+        <pre><code class="language-java">String[] lines = {"Header", "Data1", "Data2"};
+String content = linesToString(lines);
+Files.write(Paths.get("output.txt"), content.getBytes());</code></pre>
+    </div>
+    <div class="outputSnippet">
+      <h4>Output in output.txt:</h4>
+      <pre class="output">Header
+Data1
+Data2</pre>
+    </div>
+  </div>
+
+
+  <h2>Notes</h2>
+  <ul>
+    <li>Utilizes <code>String.join()</code> with the system's line separator for compatibility across operating systems.</li>
+    <li>Can be integrated with file writing, logging, or any other scenario requiring formatted text output.</li>
+  </ul>
+</div>
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {

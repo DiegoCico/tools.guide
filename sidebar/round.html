@@ -25,15 +25,50 @@
     <a href="print.html"> <img src="../img/classImg.png" width="20%" height="20%"/> print</a>
     <a href="printArray.html"><img src="../img/classImg.png" width="20%" height="20%"/>printArray</a>
     <a href="println.html"> <img src="../img/classImg.png" width="20%" height="20%"/> println</a>
-    <a href="round.html"> <img src="../img/classImg.png" width="20%" height="20%"/> round</a>
-    <a href="runTest.html"> <img src="../img/classImg.png" width="20%" height="20%"/> runTest</a>
+    <a href="#about"> <img src="../img/classImg.png" width="20%" height="20%"/> round</a>
+    <a href="#contact"> <img src="../img/classImg.png" width="20%" height="20%"/> runTest</a>
     <a href="#home"><img src="../img/interfaceImg.png" width="20%" height="20%"/>Test</a>
     <a href="#services"> <img src="../img/classImg.png" width="20%" height="20%"/> testSame</a>
     <a href="#services"> <img src="../img/classImg.png" width="20%" height="20%"/> toInt </a>
   </ul>
 </div>
 
+<div class="info">
+  <h1>Round Function</h1>
+  <p>The <code>round()</code> function is designed to round a floating-point number to a specified number of decimal places.</p>
 
+  <h2>Usage Examples</h2>
+
+  <div class="rowBox">
+    <div class="box codeSnippet">
+      <p>&gt;&gt;&gt; <span class="colorYellow">double</span> number = 3.14159;</p>
+      <p>&gt;&gt;&gt; <span class="colorGreen">int</span> decimalPlaces = 2;</p>
+      <p>&gt;&gt;&gt; <span class="colorBlue">System.out.println(round(number, decimalPlaces));</span></p>
+      <p class="output">3.14</p>
+    </div>
+  </div>
+
+  <h2>Function Definition</h2>
+  <pre class="syntax"><code>public static double round(double number, int decimalPlaces) {
+    double scale = Math.pow(10, decimalPlaces);
+    return Math.round(number * scale) / scale;
+}</code></pre>
+
+  <h2>Parameters</h2>
+  <ul>
+    <li><code>number</code>: The floating-point number to round.</li>
+    <li><code>decimalPlaces</code>: The number of decimal places to round to.</li>
+  </ul>
+
+  <h2>Return Type</h2>
+  <p>Returns the rounded number as a double.</p>
+
+  <h2>Notes</h2>
+  <ul>
+    <li>This method is useful for precise control over numerical rounding in financial calculations, statistical analysis, and other applications.</li>
+    <li>It leverages <code>Math.pow()</code> and <code>Math.round()</code> to achieve the rounding.</li>
+  </ul>
+</div>
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {

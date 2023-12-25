@@ -23,13 +23,52 @@
     <a href="isAInteger.html"> <img src="../img/classImg.png" width="20%" height="20%"/> isAInteger</a>
     <a href="linesToString.html"> <img src="../img/classImg.png" width="20%" height="20%"/> linesToString</a>
     <a href="print.html"> <img src="../img/classImg.png" width="20%" height="20%"/> print</a>
-    <a href="printArray.html"><img src="../img/classImg.png" width="20%" height="20%"/>printArray</a>
+    <a href="#home"><img src="../img/classImg.png" width="20%" height="20%"/>printArray</a>
     <a href="println.html"> <img src="../img/classImg.png" width="20%" height="20%"/> println</a>
     <a href="round.html"> <img src="../img/classImg.png" width="20%" height="20%"/> round</a>
-    <a href="runTest.html"> <img src="../img/classImg.png" width="20%" height="20%"/> runTest</a>
+    <a href="#contact"> <img src="../img/classImg.png" width="20%" height="20%"/> runTest</a>
     <a href="#home"><img src="../img/interfaceImg.png" width="20%" height="20%"/>Test</a>
     <a href="#services"> <img src="../img/classImg.png" width="20%" height="20%"/> testSame</a>
     <a href="#services"> <img src="../img/classImg.png" width="20%" height="20%"/> toInt </a>
+  </ul>
+</div>
+
+<div class="info">
+  <h1>printArray Function</h1>
+  <p>The <code>printArray()</code> function is designed to print the elements of an array in a readable format. It iterates over the array and prints each element.</p>
+
+  <h2>Usage Examples</h2>
+
+  <div class="rowBox">
+    <div class="box codeSnippet">
+      <p>&gt;&gt;&gt; <span class="colorGreen">int[]</span> numbers = {1, 2, 3, 4, 5};</p>
+      <p>&gt;&gt;&gt; <span class="colorYellow">printArray(numbers);</span></p>
+      <p class="output">1, 2, 3, 4, 5</p>
+    </div>
+  </div>
+
+  <p>The function simplifies the process of printing array elements, without needing to write a loop each time.</p>
+
+  <div class="rowBox">
+    <div class="box codeSnippet">
+      <p>&gt;&gt;&gt; <span class="colorGreen">String[]</span> names = {"Alice", "Bob", "Charlie"};</p>
+      <p>&gt;&gt;&gt; <span class="colorYellow">printArray(names);</span></p>
+      <p class="output">Alice, Bob, Charlie</p>
+    </div>
+  </div>
+
+  <h2>Function Definition</h2>
+  <pre class="syntax"><code>public static &lt;T&gt; void printArray(T[] array) {
+    for (T element : array) {
+        System.out.print(element + ", ");
+    }
+    System.out.println();
+}</code></pre>
+
+  <h2>Notes</h2>
+  <ul>
+    <li>This method can handle arrays of any type, including primitives and objects.</li>
+    <li>It uses a generic type <code>T</code>, making it versatile for various array types.</li>
   </ul>
 </div>
 

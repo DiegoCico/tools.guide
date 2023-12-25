@@ -26,10 +26,58 @@
     <a href="printArray.html"><img src="../img/classImg.png" width="20%" height="20%"/>printArray</a>
     <a href="println.html"> <img src="../img/classImg.png" width="20%" height="20%"/> println</a>
     <a href="round.html"> <img src="../img/classImg.png" width="20%" height="20%"/> round</a>
-    <a href="runTest.html"> <img src="../img/classImg.png" width="20%" height="20%"/> runTest</a>
+    <a href="#contact"> <img src="../img/classImg.png" width="20%" height="20%"/> runTest</a>
     <a href="#home"><img src="../img/interfaceImg.png" width="20%" height="20%"/>Test</a>
     <a href="#services"> <img src="../img/classImg.png" width="20%" height="20%"/> testSame</a>
     <a href="#services"> <img src="../img/classImg.png" width="20%" height="20%"/> toInt </a>
+  </ul>
+</div>
+
+<div class="info">
+  <h1>runTest Function</h1>
+  <p>The <code>runTest()</code> function automates the process of executing and verifying tests in Java. It scans for methods marked with the <code>@Test</code> annotation and executes them, reporting on their success or failure.</p>
+
+  <h2>Usage Example</h2>
+
+  <div class="rowBox">
+    <div class="box codeSnippet">
+      <pre><code>public class ExampleTests {
+
+    @Test
+    public void testAddition() {
+        assertEquals(5, 2 + 3);
+    }
+
+    @Test
+    public void testMultiplication() {
+        assertEquals(6, 2 * 3);
+    }
+
+    // Other test methods
+}
+
+runTest(this);</code></pre>
+    </div>
+  </div>
+
+  <h2>Expected Output</h2>
+  <div class="box codeSnippet">
+    <pre><code>Test passed: testMethod1
+Test failed: testMethod2
+java.lang.RuntimeException: Failure in logic
+    at ExampleTests.testMethod2(ExampleTests.java:...)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    ...</code></pre>
+  </div>
+
+  <h2>Function Behavior</h2>
+  <p>The <code>runTest()</code> function identifies all methods in a given class with the <code>@Test</code> annotation and executes them. It then reports whether each test passed or failed based on the expected outcomes.</p>
+
+  <h2>Implementation Notes</h2>
+  <ul>
+    <li>Each test method should be designed to assert conditions using a testing framework or custom assertions.</li>
+    <li>The function provides a quick way to run a suite of unit tests on a given class.</li>
+    <li>It's useful in continuous integration environments and for regression testing.</li>
   </ul>
 </div>
 
